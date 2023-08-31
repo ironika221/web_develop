@@ -6,33 +6,59 @@
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     </head>
     <body>
-        <style>
-            .color-red{
-                color:red;
-            }
-            .color-blue{
-                color:blue;
-            }
-        </style>
-        <h1>jQueryの勉強</h1>
-        <h2 class="color-blue">jQueryの勉強</h2>
-        <div>
-            <ul>
-                <li id="test1">リスト1</li>
-                <li><span>リスト2</span></li>
-                <li>リスト3</li>
-                <li class="test2">リスト4</li>
-            </ul>
-        </div>
-        <h2>jQueryの勉強</h2>
-        <div>
-            <span>毎日勉強</span>
-        </div>
+        <h1 class="test">jQueryの勉強</h1>
+        <input type="button" id="btn" value="ボタン">
+        <ul>
+            <li>リスト1</li>
+            <li>リスト2</li>
+            <li>リスト3</li>
+            <li>リスト4</li>
+        </ul>
         <script>
             $(function(){
-                $('h1').addClass('color-red');
+                $('li:eq(0)').html('<a href="https://google.com">google</a>');
+                $('li:eq(1)').text('テキストのみ書き換え');
+                $('li:eq(2)').wrap('<b></b>');
+                /*$('#btn').click(function(){
+                    $('ul').append('<li>リスト5</li>');
+                });*/
+                /*$('#btn').click(function(){
+                    $('ul').fadeToggle(1000);
+                });
+                $('#btn2').click(function(){
+                    $('ul').slideToggle();
+                });
+                $('#btn3').click(function(){
+                    $('h1').toggleClass();
+                });*/
+                /*$('ul').toggle();
+                $('#btn').click(function(){
+                    $('ul').toggle(1000);
+                });*/
+                /*$('ul').hide();
+                $('.menu').mouseover(function(){
+                    $('ul').slideDown();
+                }).mouseout(function(){
+                    $('ul').slideUp();
+                });*/
+                /*$('h1').hover(function(){//hoverの処理は同じメソッドを使うからカンマ区切りで2つ書いている
+                    $(this).text('マウスが乗ったよ');
+                },function(){
+                    $(this).text('マウスが外れたよ')
+                });*/
+                /*$('h1').mouseover(function(){//mouseoverとmouseoutはメソッドを2種類使っているからメソッドチェーンで2つ書いている
+                    $(this).text('マウスが乗ったよ');
+                }).mouseout(function(){
+                    $(this).text('マウスが外れたよ');
+                });*/
+                /*$('h1').hide('slow');
+                $('h1').show('slow');
+                $('h1').click(function(){
+                    $(this).hide('slow');//thisはh1をしめす
+                });*/
+                /*$('h1').addClass('color-red');
                 $('h2').removeClass('color-blue');
-                /*$('h1').css({
+                $('h1').css({
                     'color':'red',
                     'font-size':'14px'
                 });*/
