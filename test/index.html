@@ -6,11 +6,40 @@
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     </head>
     <body>
+        <style>
+            .color-red{
+                color:red;
+            }
+            .color-blue{
+                color:blue;
+            }
+        </style>
         <h1>jQueryの勉強</h1>
+        <h2 class="color-blue">jQueryの勉強</h2>
+        <div>
+            <ul>
+                <li id="test1">リスト1</li>
+                <li><span>リスト2</span></li>
+                <li>リスト3</li>
+                <li class="test2">リスト4</li>
+            </ul>
+        </div>
+        <h2>jQueryの勉強</h2>
+        <div>
+            <span>毎日勉強</span>
+        </div>
         <script>
             $(function(){
+                $('h1').addClass('color-red');
+                $('h2').removeClass('color-blue');
+                /*$('h1').css({
+                    'color':'red',
+                    'font-size':'14px'
+                });*/
                 //ここにjqueryを書く
-                $('h1').css('color','red');
+                //$('li:gt(0)').css('color','red');eqやfirstといった書き方もある
+                //$('.blue').css('color','blue').css('font-size','50px');
+                //$('#green').css('color','green')
             });
 
         </script>
