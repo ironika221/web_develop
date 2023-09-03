@@ -1,1 +1,3 @@
 fpsのapi使ったアプリ作る
+typescriptの勉強
+apiの使い方調べる
